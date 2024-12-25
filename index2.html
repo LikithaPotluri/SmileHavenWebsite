@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Haven Dental Clinic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            background-color: #0088cc;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-size: 1rem;
+            margin: 0 10px;
+        }
+
+        
+   
+        .service-card {
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .service-icon i {
+            transition: color 0.3s;
+        }
+        
+        .service-card:hover .service-icon i {
+            color: #4CAF50; /* Change color on hover */
+        }
+
+         /* Remove default border and outline */
+    .carousel {
+        border: none !important;
+        outline: none !important;
+    }
+
+    .carousel-inner {
+        border: none !important;
+    }
+
+    .carousel-item img {
+        border: none !important;
+        outline: none !important;
+    }
+
+    /* Optional: Remove the underline from the carousel heading */
+    #before-after h2 {
+        text-decoration: none !important;
+    }
+
+
+        .about-doctor img {
+            border-radius: 50%;
+            max-width: 200px;
+            border: 4px solid #0088cc;
+        }
+
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .testimonials .testimonial-card {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+            background: #f9f9f9;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .testimonials .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+
+        #contact-us {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: #0088cc;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Smile Haven Dental</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-warning text-dark nav-link px-3" href="#contact-us">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <header class="banner mt-5 pt-3" style="margin-top: 70px; text-align: center;">
+    <img src="banner.jpg" class="img-fluid" alt="Banner Image" style="height: 33vh; object-fit: contain; width: 100%;" />
+    </header>
+
+    <!-- book Appointment button -->
+    <div class="book-appointment d-flex justify-content-center my-4">
+        <button class="btn btn-warning text-dark nav-link px-3" onclick="location.href='#contact-us'">Book Appointment</button>
+    </div>
+    
+    <!--Our services-->
+    
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-size: 2.5rem; color: #4CAF50;">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #f0fff4, #d5f3e9); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #28a745;">
+                            <i class="fas fa-x-ray fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Dental X-Ray</h4>
+                        <p class="card-text">Advanced imaging for precise diagnosis and treatment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #fff0f5, #f7d8e9); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #dc3545;">
+                            <i class="fas fa-tooth fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Root Canal Treatment</h4>
+                        <p class="card-text">Save your natural teeth with pain-free procedures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #f3e5ff, #d8cfff); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #6f42c1;">
+                            <i class="fas fa-tooth-pull fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Tooth Extraction</h4>
+                        <p class="card-text">Safe and comfortable removal of damaged teeth.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #e6f7ff, #cce8ff); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #007bff;">
+                            <i class="fas fa-tools fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Dental Implants</h4>
+                        <p class="card-text">Restore your smile with permanent tooth replacements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #fffbe6, #f5e8c8); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #ffc107;">
+                            <i class="fas fa-crown fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Dentures & Crowns</h4>
+                        <p class="card-text">Custom-made prosthetics for natural-looking teeth.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #f0f0ff, #d9d8ff); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #6610f2;">
+                            <i class="fas fa-smile fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Bridges & Veneers</h4>
+                        <p class="card-text">Perfect your smile with durable, aesthetic solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #e5faff, #c8f2ff); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #17a2b8;">
+                            <i class="fas fa-child fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Child Dentistry</h4>
+                        <p class="card-text">Gentle care for your little ones' dental health.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #fef0ff, #fad1ff); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #e83e8c;">
+                            <i class="fas fa-align-center fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Orthodontic Braces</h4>
+                        <p class="card-text">Straighten your teeth with advanced braces.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #e8f0ff, #ccd8f5); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #5a5aed;">
+                            <i class="fas fa-adjust fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Invisalign Aligners</h4>
+                        <p class="card-text">Discreet, clear aligners for a beautiful smile.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #faffeb, #e5ffcb); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #7ed321;">
+                            <i class="fas fa-sun fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Teeth Whitening</h4>
+                        <p class="card-text">Brighten your teeth for a radiant smile.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #fff7e5, #ffead6); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #ffa726;">
+                            <i class="fas fa-gem fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Teeth Jewellery</h4>
+                        <p class="card-text">Unique designs to enhance your smile.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #ffe6ff, #fcd8f2); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #c2185b;">
+                            <i class="fas fa-magic fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">Smile Designing</h4>
+                        <p class="card-text">Transform your smile with expert design.</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4 mx-auto">
+                <div class="card service-card shadow-lg border-0 h-100">
+                    <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #ffffff, #d9f3ff); border-radius: 15px;">
+                        <div class="service-icon mb-4" style="color: #007bff;">
+                            <i class="fas fa-ellipsis-h fa-4x"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #2C3E50; font-weight: 700;">And More...</h4>
+                        <p class="card-text">Discover a wide range of dental services tailored just for you. Visit us to learn more!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!--Before and After-->
+    
+  <section id="before-after" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-size: 2.5rem; color: #4CAF50;">Take a look at some of our Transformations</h2>
+        <div id="beforeAfterCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="BA1.jpg" class="d-block w-100" alt="Before & After 1" style="height: 500px; object-fit: contain; border-radius: 15px;">
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="BA2.jpg" class="d-block w-100" alt="Before & After 2" style="height: 500px; object-fit: contain; border-radius: 15px;">
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="BA3.jpg" class="d-block w-100" alt="Before & After 3" style="height: 500px; object-fit: contain; border-radius: 15px;">
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <img src="ba4.jpg" class="d-block w-100" alt="Before & After 4" style="height: 500px; object-fit: contain; border-radius: 15px;">
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-item">
+                    <img src="BA5.jpg" class="d-block w-100" alt="Before & After 5" style="height: 500px; object-fit: contain; border-radius: 15px;">
+                </div>
+                <!-- Slide 6 -->
+                <div class="carousel-item">
+                    <img src="BA6.jpg" class="d-block w-100" alt="Before & After 6" style="height: 500px; object-fit: contain; border-radius: 15px;">
+                </div>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#beforeAfterCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#beforeAfterCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+    <!-- About Us-->
+ <section id="about-us" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-size: 2rem; color: #4CAF50;">About Dr. Nandan Kumar Singh</h2>
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="Dr.Nandan.jpg" alt="Dr. Nandan Kumar Singh" class="img-fluid rounded-circle" style="max-width: 70%; height: auto;">
+            </div>
+            <div class="col-md-8">
+                <p style="font-size: 1.25rem; line-height: 1.6; color: #333;">
+                    Dr. Nandan Kumar Singh is a skilled dentist with a passion for providing exceptional dental care. He earned his Bachelor of Dental Surgery (BDS) and pursued a Master's degree in Prosthodontics from Oxford Dental College, receiving a Gold Medal for his achievements.
+                    <br><br>
+                    With years of experience, Dr. Singh specializes in prosthodontics, focusing on restoring and replacing teeth to enhance both function and appearance. He returned to Bhagalpur to provide top-notch dental services to his community, ensuring that patients receive the best possible care in a welcoming environment.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!--Testimonials-->
+<section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-size: 2.5rem; color: #4CAF50;">What Our Patients Say</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <!-- Testimonial 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 text-center">
+                            <img src="Treatment1.jpg" class="rounded-circle mb-3" style="width: 120px; height: 120px;" alt="Patient 1">
+                            <p style="font-size: 1rem;">"I had quite a comfortable experience at the dental clinic. Dr. Nandan was incredibly patient throughout the entire treatment. The procedure was painless, and he handled it very smoothly and carefully. The staff was professional, and the clinic was clean and welcoming. Highly recommend this clinic for anyone seeking quality dental care!"</p>
+                            <p><strong>Ashifa Nafees</strong></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="Treatment2.jpg" class="rounded-circle mb-3" style="width: 120px; height: 120px;" alt="Patient 2">
+                            <p style="font-size: 1rem;">"I visited Smile Haven dental clinic, Dr. Nandan Singh MDS, is very friendly, well explained all treatment procedures, best for implant, very hygienic clinic. I suggest everyone visit once."</p>
+                            <p><strong>Ashishkumar Monu</strong></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="Treatment7.jpg" class="rounded-circle mb-3" style="width: 120px; height: 120px;" alt="Patient 3">
+                            <p style="font-size: 1rem;">"Smile Haven is the perfect place for all your dental needs. With Dr. Nandan, you're guaranteed excellent care and uncompromised quality. He's highly skilled and approachable, ensuring top-notch treatment. The clinic is incredibly hygienic and caters to patients of all ages. I highly recommend it to my friends and family for a comfortable and pleasant experience."</p>
+                            <p><strong>Dr. Sanjeevani R Chakraborty</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 text-center">
+                            <img src="Treatment4.jpg" class="rounded-circle mb-3" style="width: 120px; height: 120px;" alt="Patient 4">
+                            <p style="font-size: 1rem;">"A wonderful and very hygienic setup by Dr. Nandan providing the best dental care possible and catering to patients of all ages. The doctor is very friendly and has expertise in the field. I would definitely recommend this clinic and especially the doctor to all friends and family."</p>
+                            <p><strong>Hrishikesh Mahapatra</strong></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="Treatment5.jpg" class="rounded-circle mb-3" style="width: 120px; height: 120px;" alt="Patient 5">
+                            <p style="font-size: 1rem;">"I visited Dr. Nandan's clinic, Smile Haven Dental Clinic today. He did my cleaning very nicely, calmly, and his behavior was very good, all at an affordable price."</p>
+                            <p><strong>Rajpriya Madhukar</strong></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="Treatment3.jpg" class="rounded-circle mb-3" style="width: 120px; height: 120px;" alt="Patient 6">
+                            <p style="font-size: 1rem;">"The perfect place for all your dental needs. Dr. Nandan is incredibly talented and approachable, offering exceptional care to every patient. The clinic's pristine and hygienic setting ensures a comfortable treatment experience."</p>
+                            <p><strong>Suhina Mitra</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 text-center">
+                            <img src="Treatment7.jpg" class="rounded-circle mb-3" style="width: 120px; height: 120px;" alt="Patient 7">
+                            <p style="font-size: 1rem;">"Dr. Nandan's Dental Clinic is one of the best clinics I have seen in the city. He is very experienced with his clinical knowledge at the same time he is also very swift, perfect at his work. Never could imagine that a senior doctor like him would be so patient. I am definitely getting all my future treatments from him. Thanks for your warm behavior and best treatment, Doc. 5 stars for Smile Haven..."</p>
+                            <p><strong>Yogini Trinayana</strong></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="Treatment8.jpg" class="rounded-circle mb-3" style="width: 120px; height: 120px;" alt="Patient 8">
+                            <p style="font-size: 1rem;">"Highly skilled and well-behaved, superb doctor with diverse experience at the most reasonable fee. The clinic also has world-class top-notch facilities, and the staff is also friendly. The doctor personally takes care of cleanliness of the premises. Highly recommended, the best implantologist in our city Bhagalpur."</p>
+                            <p><strong>Jay Mishra</strong></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="Treatment1.jpg" class="rounded-circle mb-3" style="width: 120px; height: 120px;" alt="Patient 1">
+                            <p style="font-size: 1rem;">"I had quite a comfortable experience at the dental clinic. Dr. Nandan was incredibly patient throughout the entire treatment. The procedure was painless, and he handled it very smoothly and carefully. The staff was professional, and the clinic was clean and welcoming. Highly recommend this clinic for anyone seeking quality dental care!"</p>
+                            <p><strong>Ashifa Nafees</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Us/ Book Appointment Section -->
+ <section id="contact-us" class="py-5 bg-light">
+    <div class="container">
+        <!-- Contact Us Section -->
+        <h2 class="text-center mb-5" style="font-size: 2.5rem; color: #4CAF50;">Contact Us</h2>
+        <div class="row">
+            <!-- Contact Information Section -->
+            <div class="col-md-5">
+                <h3>Get In Touch</h3>
+                <p>For inquiries, feel free to contact us.</p>
+                
+                <!-- Contact Information -->
+                <ul style="list-style-type:none; padding-left: 0;">
+                    <li><strong>Phone:</strong> +91 72594 12053</li>
+                    <li><strong>Email:</strong> info@smilehaven.in</li>
+                    <li><strong>Address:</strong> Raja SN Rd, near KK Nursing Home, Masakchak, Bhagalpur, Bihar - 812001</li>
+                </ul>
+                
+                <!-- Social Media Icons -->
+                <div class="mb-3">
+                    <a href="https://www.linkedin.com/in/dr-nandan-kumar-70a52b168/?originalSubdomain=in" target="_blank" class="me-3">
+                        <img src="https://cdn-icons-png.freepik.com/256/2504/2504923.png?ga=GA1.1.1099711298.1731651789&semt=ais_hybrid" alt="LinkedIn" style="width: 40px; height: 40px;">
+                    </a>
+                    <a href="https://www.instagram.com/smilehavenbhagalpur/" target="_blank" class="me-3">
+                        <img src="https://cdn-icons-png.freepik.com/256/2111/2111463.png?ga=GA1.1.1099711298.1731651789&semt=ais_hybrid" alt="Instagram" style="width: 40px; height: 40px;">
+                    </a>
+                    <a href="" target="_blank" class="me-3">
+                        <img src="https://cdn-icons-png.freepik.com/256/2504/2504903.png?ga=GA1.1.1099711298.1731651789&semt=ais_hybrid" alt="Facebook" style="width: 40px; height: 40px;">
+                    </a>
+                </div>
+
+                <!-- Google Maps Embed with clickable link -->
+                <div>
+                    <iframe
+                        src="https://maps.google.com/maps?q=Smile%20Haven%20Dental%20Clinic%20%26%20Implant%20Centre%20-%20Best%20Dental%20Clinic%20in%20Bhagalpur%20%7CDr.%20Nandan%20Singh%20(+Implant%20Specialist)&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Booking Form Section -->
+            <div class="col-md-5 offset-md-1">
+                <h3>Book an Appointment</h3>
+                <p>Fill out the form, and we will get back to you as soon as possible.</p>
+                
+                <!-- Booking Form -->
+                <form id="bookingForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Preferred Appointment Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message (Optional)</label>
+                        <textarea class="form-control" id="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+            <p>&copy; 2024 Smile Haven Dental Clinic. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+   
+
+
+
+    
+  <!-- Bootstrap CSS -->
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+<!-- Bootstrap Bundle with Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+    </body>
+    </html>
